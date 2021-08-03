@@ -1,18 +1,11 @@
 package easy;
 
+import java.util.stream.IntStream;
+
 public class MissingNumber {
     public int missingNumber(int[] nums) {
-        int ogsum = 0;
-        int sum = 0;
-        if (nums.length == 1 && nums[0] == 0) return 1;
-        else
-        {
-            for (int i = 0; i < nums.length; i++)
-            {
-                ogsum += i;
-                sum += nums[i];
-            }
-            return ogsum + nums.length - sum;
-        }
+        int n = nums.length;
+        int total = IntStream.of(nums).sum();
+        return n * (n + 1) / 2 - total;
     }
 }
