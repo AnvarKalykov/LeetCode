@@ -16,9 +16,6 @@ public class ContainsDuplicate {
             set.add(num);
         }
 
-        if (set.size() == nums.length) {
-            return false;
-        }
-        return true;
+        return set.size() != nums.length;
     }
 }
