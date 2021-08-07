@@ -10,12 +10,11 @@ import java.util.Set;
 
 public class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
-        Set <Integer> set = new HashSet<Integer>();
-
+        Set<Integer> set = new HashSet<>();
         for (int num : nums) {
             set.add(num);
         }
-
         return set.size() != nums.length;
     }
 }
+
