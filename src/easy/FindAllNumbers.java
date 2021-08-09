@@ -10,16 +10,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FindAllNumbers {
-    public List<Integer> findDisappearedNumbers(int[] a) {
-        int[] count = new int[a.length+1];
-        for(int i : a) {
-            count[i]++;
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        int[] arr = new int[nums.length + 1];
+        List<Integer> tist = new ArrayList<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            arr[nums[i]]++;
         }
 
-        List<Integer> res = new ArrayList<>();
-        for(int i=1; i<count.length; i++) {
-            if(count[i] == 0) res.add(i);
+        for (int i = 1; i < nums.length + 1; i++) {
+            if (arr[i] == 0) {
+                tist.add(i);
+            }
         }
-        return res;
+        return tist;
+
     }
 }
