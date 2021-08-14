@@ -10,7 +10,7 @@ arr[i] > arr[i+1] > ... > arr[arr.length - 1]
 Given an integer array arr that is guaranteed to be a mountain, return any i such that arr[0] < arr[1] < ... arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1].
  */
 
-public class PeakIndexMountainArray {
+ class PeakIndexMountainArray {
     public int peakIndexInMountainArray(int[] arr) {
         int left = 0;
         int right = arr.length - 1;
@@ -24,5 +24,13 @@ public class PeakIndexMountainArray {
             }
         }
         return left;
+    }
+}
+
+     class YourClassNameHere {
+    public static void main(String[] args) {
+        PeakIndexMountainArray peakIndexMountainArray = new PeakIndexMountainArray();
+        int[] arr = {3,4,5,1};
+        System.out.println(peakIndexMountainArray.peakIndexInMountainArray(arr));
     }
 }
