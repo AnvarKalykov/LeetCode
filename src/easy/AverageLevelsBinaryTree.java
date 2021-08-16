@@ -4,7 +4,21 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class AverageLevelsBinaryTree {
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
+class AverageLevelsBinaryTree {
     public List<Double> averageOfLevels(TreeNode root) {
         List<Double> res = new ArrayList<Double>();
         if (root == res) {
@@ -37,15 +51,4 @@ public class AverageLevelsBinaryTree {
     }
 }
 
- class TreeNode {
-     int val;
-     TreeNode left;
-     TreeNode right;
-     TreeNode() {}
-     TreeNode(int val) { this.val = val; }
-     TreeNode(int val, TreeNode left, TreeNode right) {
-         this.val = val;
-         this.left = left;
-         this.right = right;
-     }
- }
+
