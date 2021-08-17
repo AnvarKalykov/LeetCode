@@ -13,7 +13,7 @@ public class PathSum {
     }
 }
 
-class Solution {
+class Solution112 {
     public boolean hasPathSum(PathSum root, int targetSum) {
         if (root == null) {
             return false;
